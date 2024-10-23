@@ -1,0 +1,72 @@
+float:
+  any:
+  - base_args: ['@metric']
+    constructor: Lorann
+    disabled: false
+    docker_tag: ann-benchmarks-lorann
+    module: ann_benchmarks.algorithms.lorann
+    name: lorann
+    run_groups:
+      lorann:
+        args: [[8], [1024, 2048, 4096], [64, 128, 192], [32], [1, 5]]
+        query_args: [[8, 16, 24, 32, 48, 64, 128, 256], [100, 200, 400, 800, 1200, 1600, 2400, 3200]]
+  - base_args: ['@metric']
+    constructor: Lorann
+    disabled: false
+    docker_tag: ann-benchmarks-lorann
+    module: ann_benchmarks.algorithms.lorann
+    name: lorann-16
+    run_groups:
+      lorann:
+        args: [[8], [1024, 2048, 4096], [64, 128, 192], [16], [1, 5]]
+        query_args: [[8, 16, 24, 32, 48, 64, 128, 256], [100, 200, 400, 800, 1200, 1600, 2400, 3200]]
+  - base_args: ['@metric']
+    constructor: Lorann
+    disabled: false
+    docker_tag: ann-benchmarks-lorann
+    module: ann_benchmarks.algorithms.lorann
+    name: lorann-32
+    run_groups:
+      lorann:
+        args: [[8], [1024, 2048, 4096], [64, 128, 192], [32], [1, 5]]
+        query_args: [[8, 16, 24, 32, 48, 64, 128, 256], [100, 200, 400, 800, 1200, 1600, 2400, 3200]]
+  - base_args: ['@metric']
+    constructor: Lorann
+    disabled: false
+    docker_tag: ann-benchmarks-lorann
+    module: ann_benchmarks.algorithms.lorann
+    name: lorann-64
+    run_groups:
+      lorann:
+        args: [[8], [1024, 2048, 4096], [64, 128, 192], [64], [1, 5]]
+        query_args: [[8, 16, 24, 32, 48, 64, 128, 256], [100, 200, 400, 800, 1200, 1600, 2400, 3200]]
+  - base_args: ['@metric']
+    constructor: Lorann
+    disabled: false
+    docker_tag: ann-benchmarks-lorann
+    module: ann_benchmarks.algorithms.lorann
+    name: lorann-fp
+    run_groups:
+      lorann:
+        args: [[-1], [1024, 2048, 4096], [64, 128, 192], [32], [1, 5]]
+        query_args: [[8, 16, 24, 32, 48, 64, 128, 256], [100, 200, 400, 800, 1200, 1600, 2400, 3200]]
+  - base_args: ['@metric']
+    constructor: Lorann
+    disabled: false
+    docker_tag: ann-benchmarks-lorann
+    module: ann_benchmarks.algorithms.lorann
+    name: rrr
+    run_groups:
+      lorann:
+        args: [[8], [1024, 2048, 4096], [-1], [32], [1, 5]]
+        query_args: [[8, 16, 24, 32, 48, 64, 128, 256], [100, 200, 400, 800, 1200, 1600, 2400, 3200]]
+  - base_args: ['@metric']
+    constructor: Lorann
+    disabled: false
+    docker_tag: ann-benchmarks-lorann
+    module: ann_benchmarks.algorithms.lorann
+    name: rrr-fp
+    run_groups:
+      lorann:
+        args: [[-1], [1024, 2048, 4096], [-1], [32], [1, 5]]
+        query_args: [[8, 16, 24, 32, 48, 64, 128, 256], [100, 200, 400, 800, 1200, 1600, 2400, 3200]]

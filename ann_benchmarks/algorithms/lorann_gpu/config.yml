@@ -1,0 +1,82 @@
+float:
+  any:
+  - base_args: ['@metric']
+    constructor: IVFJax
+    disabled: false
+    docker_tag: ann-benchmarks-lorann_gpu
+    module: ann_benchmarks.algorithms.lorann_gpu
+    name: lorann-ivf-jax
+    run_groups:
+      lorann:
+        args: [[512, 1024, 2048, 4096]]
+        query_args: [[8, 16, 32, 48, 64, 96]]
+  - base_args: ['@metric']
+    constructor: IVFMLX
+    disabled: false
+    docker_tag: ann-benchmarks-lorann_gpu
+    module: ann_benchmarks.algorithms.lorann_gpu
+    name: lorann-ivf-mlx
+    run_groups:
+      lorann:
+        args: [[512, 1024, 2048, 4096]]
+        query_args: [[8, 16, 32, 48, 64, 96]]
+  - base_args: ['@metric']
+    constructor: IVFMLXCPU
+    disabled: false
+    docker_tag: ann-benchmarks-lorann_gpu
+    module: ann_benchmarks.algorithms.lorann_gpu
+    name: lorann-ivf-mlx-cpu
+    run_groups:
+      lorann:
+        args: [[512, 1024, 2048, 4096]]
+        query_args: [[8, 16, 32, 48, 64, 96]]
+  - base_args: ['@metric']
+    constructor: LorannCupy
+    disabled: true
+    docker_tag: ann-benchmarks-lorann_gpu
+    module: ann_benchmarks.algorithms.lorann_gpu
+    name: lorann-cupy
+    run_groups:
+      lorann:
+        args: [[64, 128, 192], [24], [5], [1024, 2048, 4096]]
+        query_args: [[8, 16, 24, 32, 48, 64, 96, 128], [100, 200, 400, 800, 1200, 1600, 2400]]
+  - base_args: ['@metric']
+    constructor: LorannMLX
+    disabled: false
+    docker_tag: ann-benchmarks-lorann_gpu
+    module: ann_benchmarks.algorithms.lorann_gpu
+    name: lorann-mlx
+    run_groups:
+      lorann:
+        args: [[64, 128, 192], [24], [5], [1024, 2048, 4096]]
+        query_args: [[8, 16, 24, 32, 48, 64, 96, 128], [100, 200, 400, 800, 1200, 1600, 2400]]
+  - base_args: ['@metric']
+    constructor: LorannMLXCPU
+    disabled: false
+    docker_tag: ann-benchmarks-lorann_gpu
+    module: ann_benchmarks.algorithms.lorann_gpu
+    name: lorann-mlx-cpu
+    run_groups:
+      lorann:
+        args: [[64, 128, 192], [24], [5], [1024, 2048, 4096]]
+        query_args: [[8, 16, 24, 32, 48, 64, 96, 128], [100, 200, 400, 800, 1200, 1600, 2400]]
+  - base_args: ['@metric']
+    constructor: LorannTorch
+    disabled: true
+    docker_tag: ann-benchmarks-lorann_gpu
+    module: ann_benchmarks.algorithms.lorann_gpu
+    name: lorann-torch
+    run_groups:
+      lorann:
+        args: [[64, 128, 192], [24], [5], [1024, 2048, 4096]]
+        query_args: [[8, 16, 24, 32, 48, 64, 96, 128], [100, 200, 400, 800, 1200, 1600, 2400]]
+  - base_args: ['@metric']
+    constructor: LorannJax
+    disabled: false
+    docker_tag: ann-benchmarks-lorann_gpu
+    module: ann_benchmarks.algorithms.lorann_gpu
+    name: lorann-jax
+    run_groups:
+      lorann:
+        args: [[64, 128, 192], [24], [5], [1024, 2048, 4096], [16, 32]]
+        query_args: [[8, 16, 24, 32, 48, 64, 96, 128, 256], [100, 200, 400, 800, 1200, 1600, 2400, 3200]]
